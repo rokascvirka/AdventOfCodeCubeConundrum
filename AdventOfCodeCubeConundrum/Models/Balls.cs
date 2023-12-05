@@ -8,12 +8,16 @@ namespace AdventOfCodeCubeConundrum.Models
 {
     public class Balls
     {
-        public int Red { get; set; }
-        public int Blue { get; set; }
-        public int Green { get; set; }
-        
+        public int Red { get; set; } = 0;
+        public int Blue { get; set; } = 0;
+        public int Green { get; set; } = 0;
 
-        public Balls(int gameId, int red, int blue, int green)
+        public Balls()
+        {
+            
+        }
+
+        public Balls(int red, int blue, int green)
         {
             Blue = blue;
             Red = red;
