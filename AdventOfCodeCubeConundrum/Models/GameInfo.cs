@@ -8,25 +8,28 @@ namespace AdventOfCodeCubeConundrum.Models
 {
     public class GameInfo
     {
-
-        public List<GameInfo> FullData { get; set; }
         public int GameId { get; set; }
-
+        public List<Balls> FullData { get; set; }
         public bool IsPosible { get; set; }
 
-        public GameInfo(int gameId, Balls balls)
+        public GameInfo(int gameId, List<Balls> balls)
         {
             GameId = gameId;
             IsPosible = IsGamePosible(balls);
         }
 
-        private static bool IsGamePosible(Balls balls)
+        private static bool IsGamePosible(List<Balls> balls)
         {
-            if(balls.Red <=12 && balls.Blue <= 13 && balls.Green <= 14)
+            foreach (Balls ball in balls)
             {
-                return true;
+
+                if (ball.Red > 12 && ball.Blue > 13 && ball.Green > 14)
+                {
+                    return false;
+                }
             }
-            return false;
+            return true;
         }
+
     }
 }
