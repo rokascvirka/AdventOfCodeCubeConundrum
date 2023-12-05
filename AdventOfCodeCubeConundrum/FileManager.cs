@@ -14,7 +14,6 @@ namespace AdventOfCodeCubeConundrum
             {
                return sr.ReadToEnd().Split(Environment.NewLine);
             }
-
         }
     }
 }

@@ -8,6 +8,10 @@ namespace AdventOfCodeCubeConundrum.Models
 {
     public class GameInfo
     {
+
+        const int MAX_RED_SIZE = 12;
+        const int MAX_GREEN_SIZE = 13;
+        const int MAX_BLUE_SIZE = 14;
         public int GameId { get; set; } = 0;
         public List<Balls> FullData { get; set; }
         public bool IsPosible { get; set; } = false;
@@ -28,7 +32,7 @@ namespace AdventOfCodeCubeConundrum.Models
             foreach (Balls ball in balls)
             {
 
-                if (ball.Red > 12 || ball.Blue > 13 || ball.Green > 14)
+                if (ball.Red > MAX_RED_SIZE || ball.Blue > MAX_BLUE_SIZE || ball.Green > MAX_GREEN_SIZE)
                 {
                     return false;
                 }

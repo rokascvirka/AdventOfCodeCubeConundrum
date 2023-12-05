@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using Xunit;
 using AdventOfCodeCubeConundrum.Models;
 using AdventOfCodeCubeConundrum;
 
@@ -56,7 +54,7 @@ public class GameInfoTests
         var sum = Calculator.GetPossibleGamesSum(gameInfoList);
 
         // Assert
-        Assert.Equal(3, sum); // Sum of GameIds 1 and 2
+        Assert.Equal(3, sum); 
     }
 
     [Fact]
@@ -106,7 +104,6 @@ public class GameInfoTests
         // Assert
         Assert.Equal(0, sum);
     }
-
 }
 
 

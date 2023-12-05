@@ -14,8 +14,9 @@ namespace AdventOfCodeCubeConundrum
                     sum += game.GameId;
                 }
             }
+            Console.WriteLine(sum);
+            Console.WriteLine(gameInfo.Where(gi=>gi.IsPosible).Select(gi=>gi.GameId).Sum());
             return sum;
-
         }
     }
 }
