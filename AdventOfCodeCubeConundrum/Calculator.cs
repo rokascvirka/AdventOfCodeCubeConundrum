@@ -16,5 +16,15 @@ namespace AdventOfCodeCubeConundrum
             }
             return sum;
         }
+
+        public static int GetPowerOfSets(List<GameInfo> gameInfo)
+        {
+            var sum = 0;
+            foreach (var game in gameInfo)
+            {
+              sum += game.PowerSum;
+            }
+            return sum;
+        }
     }
 }
